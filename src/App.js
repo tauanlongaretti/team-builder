@@ -2,14 +2,20 @@ import React, { useState } from 'react';
 import './App.css';
 import MemberForm from "./Components/Form";
 import Members from "./Components/Members";
-import { notEqual } from 'assert';
+import styled from "styled-components";
+
+const MembersDiv = styled.div`
+  background-color: #3d80c2;
+  margin: 25px;
+  padding: 25px;
+`;
 
 function App() {
   const [teamMembers, setTeamMembers] = useState([
     {
-      name:"", 
-      email:"",
-      role:""
+      name:"Tauan", 
+      email:"tauanlongaretti@gmail.com",
+      role:"Full Stack Web Dev"
     }
 ]);
 
@@ -34,9 +40,9 @@ function App() {
       <div className="form-component">
         <MemberForm addNewMember={addNewMember} />
       </div>
-      <div className="members">
+      <MembersDiv className="members">
         <Members teamMembers={teamMembers} />
-      </div>
+      </MembersDiv>
     </div>
   );
 }
