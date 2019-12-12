@@ -6,14 +6,14 @@ import styled from "styled-components";
 
 const MembersDiv = styled.div`
   background-color: #3d80c2;
-  margin: 25px;
-  padding: 25px;
+  margin: 20px;
+  padding: 20px;
 `;
 
 function App() {
   const [teamMembers, setTeamMembers] = useState([
     {
-      name:"Tauan", 
+      name:"Tauan Longaretti", 
       email:"tauanlongaretti@gmail.com",
       role:"Full Stack Web Dev"
     }
